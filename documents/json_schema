@@ -1,0 +1,13 @@
+{
+"batch_id": 00000000,
+"num_failed": 8,
+"content_set": "Something",
+"date": "data string",
+"vendor": "something",
+"num_expected":9,
+"num_arrived":10,
+"num_vendor": 11,
+"num_missing":2,
+"num_content_set": 1
+
+}
