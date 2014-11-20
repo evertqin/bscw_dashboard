@@ -27,7 +27,7 @@ CollectionDriver.prototype.findIdByBatchName = function(collectionName, batch, c
     this.getCollection(collectionName, function(error, the_collection) {
         if(error) {callback(error);}
         else {
-            the_collection.find({'batch':batch}, function(error, id) {
+            the_collection.find({'name':batch}, function(error, id) {
                 if (error) {callback(error);}
                 else callback(null, id);
             });
@@ -46,7 +46,7 @@ CollectionDriver.prototype.get = function(collectionName, id, callback) { //A
                 if (error) callback(error);
                 else callback(null, doc); })
             } else if(checkForBatch.test(id)) {
-                the_collection.findOne({'batch': id}, function(error, doc) {
+                the_collection.findOne({'name': id}, function(error, doc) {
                     if(error) {callback(error);}
                      else {callback(null, doc);}
                 });                
